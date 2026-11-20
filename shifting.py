@@ -1,3 +1,4 @@
+# right shifting
 # arr=[5,10,15,20,25,30,35]
 # pos=3
 # for i in range(len(arr)-1,pos-1,-1):
@@ -25,7 +26,7 @@
 
 
 # ---------------------------------------------------------------------------
-# arr = [5,10,15,20,25,30,25]
+# arr = [5,10,15,20,25,30,35]
 # pos = 3
 # for i in range(len(arr)-pos, len(arr)):
 #     arr[i] = 0
@@ -35,12 +36,11 @@
 # o/p=[5,10,15,20,0,0,0]
 
 # ------------------------------------------------------------------------------------------
-# changing the position
+# adding element to specific position
 # arr=[5,10,20,25]
 # pos=2
 # insert=15
 # for i in range(len(arr)-1,pos-1,-1):
-#     arr[i]=arr[i-1]
 #     arr[i]=arr[i-1]
 # arr[pos]=insert
 # print(arr)
@@ -48,7 +48,7 @@
 
 # -----------------------------------------------------------------------------------
 # deleting 15 and left shifting
-arr = [5,10,15,20,25,30,25]
+arr = [5,10,15,20,25,30]
 pos = 2
 for i in range(pos, len(arr)-1,1):
     arr[i] = arr[i+1]
