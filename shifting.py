@@ -59,9 +59,46 @@
 
 # -----------------------------------------------------------------------------------
 # deleting 15 and right shifting
-arr = [5,10,15,20,25,30]
-pos = 2
-for i in range(pos, 0, -1):
-    arr[i] = arr[i-1]
-arr[0]=0
-print(arr)
+# arr = [5,10,15,20,25,30]
+# pos = 2
+# for i in range(pos, 0, -1):
+#     arr[i] = arr[i-1]
+# arr[0]=0
+# print(arr)
+
+    
+# -----------------------------------------------------------------------------------
+# deleting x occurence and shift non-occurence elements to left
+# o/p = [20,30,40,0,0,0]
+# arr=[10,20,10,30,10,40]
+# x=10
+# j=0
+# for i in range(len(arr)):
+#     if arr[i]!=x:
+#         arr[j]=arr[i]
+#         j+=1
+
+# for i in range(j,len(arr)):
+#     arr[j]=0
+#     j+=1
+
+# print(arr)
+
+
+# ----------------------------------------------------------------------------
+
+# Input: nums = [0,1,0,3,12]
+# Output: [1,3,12,0,0]
+nums = [0,1,0,3,12]
+pos=0
+for i in range(len(nums)):
+    if nums[i] != 0:
+        temp = nums[i]
+
+        for j in range(i, pos, -1):
+            nums[j] = nums[j-1]
+
+        nums[pos] = temp
+        pos += 1
+
+print(nums)
