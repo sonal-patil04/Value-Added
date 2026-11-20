@@ -86,19 +86,33 @@
 
 
 # ----------------------------------------------------------------------------
-
+# leetcode 283
 # Input: nums = [0,1,0,3,12]
 # Output: [1,3,12,0,0]
-nums = [0,1,0,3,12]
-pos=0
-for i in range(len(nums)):
-    if nums[i] != 0:
-        temp = nums[i]
+# nums = [0,1,0,3,12]
+# pos=0
+# for i in range(len(nums)):
+#     if nums[i] != 0:
+#         temp = nums[i]
 
-        for j in range(i, pos, -1):
-            nums[j] = nums[j-1]
+#         for j in range(i, pos, -1):
+#             nums[j] = nums[j-1]
 
-        nums[pos] = temp
-        pos += 1
+#         nums[pos] = temp
+#         pos += 1
 
-print(nums)
+# print(nums)
+
+
+# ------------------------------------------------------------------------------
+# shifting all 0 to right(end of array) and non-zero to left 
+arr = [0,1,0,3,12]
+j=0
+for i in range(0,len(arr),1):
+    if arr[i]!=0:
+        temp=arr[i]
+        arr[i]=arr[j]
+        arr[j]=temp
+        j+=1
+
+print(arr)
