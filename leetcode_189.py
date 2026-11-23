@@ -1,14 +1,3 @@
-# arr=[1,2,3,4,5,6,7]
-# pos=1
-# for i in range(0,len(arr)-pos):
-#     temp=arr[i]
-#     arr[i]=arr[i+pos]
-# for i in range(-1,pos-1):
-#     arr[-1]=temp                  
-# print(arr)
-
-
-
 arr=[1,2,3,4,5,6,7]
 k=2
 r=2
